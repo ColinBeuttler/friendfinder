@@ -5,6 +5,7 @@ var bodyParser = require("bodyparser")
 var PORT = process.env.PORT || 3636
 
 var appParser = bodyParser.json()
+require("../friendsData/friendsList.js")(app),
 
 app.listen(PORT, function(){
     console.log("Listening on port" + PORT)
